@@ -40,6 +40,18 @@ public class World {
         this.matrix = newMatrix;
     }
 
+    public int countIndividuals() {
+        int individuals = 0;
+
+        for (int i = 0; i < this.countRows(); i++) {
+            for (int j = 0; j < this.countColumns(); j++) {
+                individuals += isAlive(i,j) ? 1 : 0;
+            }
+        }
+
+        return individuals;
+    }
+
     @Override
     public String toString() {
         String worldString = "";
@@ -53,19 +65,6 @@ public class World {
 
         return worldString;
     }
-
-    public int countIndividuals() {
-        int individuals = 0;
-
-        for (int i = 0; i < this.countRows(); i++) {
-            for (int j = 0; j < this.countColumns(); j++) {
-                individuals += isAlive(i,j) ? 1 : 0;
-            }
-        }
-
-        return individuals;
-    }
-
 
     void setMatrix(boolean[][] matrix) {
         this.matrix = matrix;

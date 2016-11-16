@@ -1,4 +1,4 @@
-    package me.fpoblete;
+package me.fpoblete;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
